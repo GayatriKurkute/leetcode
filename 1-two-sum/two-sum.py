@@ -1,8 +1,12 @@
 class Solution(object):
+    
     def twoSum(self, nums, target):
-        d = {}
-        
-        for i, num in enumerate(nums):
-            if target - num in d:
-                return [d[target - num], i]
-            d[num] = i
+        seen = {}
+
+        for i in range(len(nums)):
+            complement = target - nums[i]
+
+            if complement in seen:
+                return [seen[complement], i]
+
+            seen[nums[i]] = i       
