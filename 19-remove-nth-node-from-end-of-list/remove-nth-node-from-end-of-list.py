@@ -1,10 +1,10 @@
 class Solution(object):
     def removeNthFromEnd(self, head, n):
-        x = ListNode(0)
-        x.next = head
+        xh = ListNode(0)
+        xh.next = head
 
-        slow = x
-        fast = x
+        slow = xh
+        fast = xh
 
         for i in range(n + 1):
             fast = fast.next
@@ -14,4 +14,5 @@ class Solution(object):
             fast = fast.next
 
         slow.next = slow.next.next
-        return x.next
+        return xh.next
+        
