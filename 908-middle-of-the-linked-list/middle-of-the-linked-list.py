@@ -1,6 +1,6 @@
 class Solution(object):
     def middleNode(self, head):
-      
+       
         slow = head
         fast = head
 
@@ -8,4 +8,4 @@ class Solution(object):
             slow = slow.next
             fast = fast.next.next
 
-        return slow
+        return slow    
