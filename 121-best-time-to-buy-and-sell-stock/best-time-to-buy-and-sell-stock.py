@@ -1,6 +1,6 @@
 class Solution(object):
     def maxProfit(self, prices):
-    
+       
         min_price = prices[0]
         max_profit = 0
 
@@ -11,5 +11,4 @@ class Solution(object):
                 max_profit = max(max_profit, price - min_price)
 
         return max_profit
-      
         
